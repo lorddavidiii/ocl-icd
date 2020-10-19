@@ -63,7 +63,7 @@ case $host_os in
 esac
 if test $cl_h = yes; then
   AC_MSG_CHECKING([whether OpenCL headers $OPENCL_VERSION are available])
-  AC_PREPROC_IFELSE([
+  AC_COMPILE_IFELSE([
     AC_LANG_PROGRAM([[
 #define CL_TARGET_OPENCL_VERSION ]REQ_OPENCL_TARGET_VERSION[0
 #if defined(__APPLE__) || defined(__MACOSX)
